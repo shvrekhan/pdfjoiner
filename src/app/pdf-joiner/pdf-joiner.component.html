@@ -1,0 +1,11 @@
+<h1>PDF Joiner</h1>
+
+<div>
+  <input type="file" multiple (change)="onFileSelected($event)">
+  <button (click)="joinPDFs()">Join PDFs</button>
+</div>
+
+<div *ngIf="outputURL">
+  <h2>Joined PDF</h2>
+  <a [href]="outputURL" download="joined.pdf">Download</a>
+</div>
